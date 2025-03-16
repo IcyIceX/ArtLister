@@ -1,17 +1,37 @@
+# ArtLister 配置文件
+# 更多信息请访问: https://github.com/IcyIceX/ArtLister
+
 # LLM API Configuration
 llm:
-  provider: "deepseek-chat"  # 支持的LLM提供商
-  api_key: ""        # API密钥将由用户在界面中输入
+  # 当前支持的LLM提供商: deepseek-chat
+  provider: "deepseek-chat"  
+  
+  # API密钥设置
+  # 可以在此处设置默认密钥，或在GUI界面中输入
+  # 为了安全考虑，建议在GUI中输入而不是在此处保存
+  api_key: ""        
 
-# File Processing
+# 文件处理配置
 input:
-  allowed_formats:    # 支持的文件格式
-    - .xlsx
-    - .doc
-    - .docx
-    - .txt
+  # 支持的输入文件格式
+  # 注意：
+  # - PDF文件支持可能需要额外的OCR处理
+  # - DOCX/XLSX文件需要安装相应的依赖
+  allowed_formats:    
+    - .xlsx    # Excel文件
+    - .doc     # Word文档（旧版）
+    - .docx    # Word文档
+    - .txt     # 文本文件
+    - .pdf     # PDF文件
 
-# Output Configuration
+# 输出配置
 output:
-  directory: "output"  # 输出目录
-  excel_filename: "art_list.xlsx"  # 默认Excel文件名
+  # 输出目录设置
+  # 可以使用相对路径或绝对路径
+  # 默认在程序目录下创建output文件夹
+  directory: "output"  
+  
+  # Excel文件名设置
+  # 如果文件已存在，会自动添加序号
+  # 例如: art_list(1).xlsx
+  excel_filename: "art_list.xlsx"

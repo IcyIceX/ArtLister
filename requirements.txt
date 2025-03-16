@@ -1,4 +1,14 @@
-#PySimpleGUI --trusted-host pysimplegui.net --trusted-host pypi.org --trusted-host files.pythonhosted.org
-FreeSimpleGUI
-pyyaml
-pyinstaller
+# GUI
+FreeSimpleGUI>=4.60.0
+
+# 文件处理
+pyyaml>=6.0.1
+markitdown>=1.0.0
+pandas>=2.0.0
+openpyxl>=3.1.0  # Excel文件支持
+
+# API集成
+openai>=1.0.0  # 用于DeepSeek API调用
+
+# 开发工具
+pyinstaller>=6.0.0  # 仅开发环境需要

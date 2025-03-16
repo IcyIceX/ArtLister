@@ -12,6 +12,9 @@ import traceback
 
 class ArtLister:
     def __init__(self):
+        # 版本信息
+        self.version = "v1.0-dev"
+        
         # 获取应用程序路径
         self.application_path = self.get_application_path()
         
@@ -86,11 +89,12 @@ class ArtLister:
         # 定义布局
         layout = [
             [sg.Text('欢迎使用美术清单助手', font=('Any', 16))],
+            [sg.Text(f'版本: {self.version}', font=('Any', 10))],
             [sg.Text('请输入Deepseek密钥:', size=(15, 1)), 
              sg.Input(key='-API_KEY-', password_char='*', size=(45, 1))],
             [sg.Text('选择文件:', size=(15, 1)), 
              sg.Input(key='-FILE-', size=(35, 1)), 
-             sg.FileBrowse(file_types=(("所有支持的文件", "*.xlsx *.doc *.docx *.txt"),))],
+             sg.FileBrowse(file_types=(("所有支持的文件", "*.xlsx *.doc *.docx *.txt *.pdf"),))],
             [sg.Text('处理状态:', size=(15, 1)), 
              sg.Text('等待开始...', key='-STATUS-', size=(45, 1))],
             [sg.ProgressBar(100, orientation='h', size=(40, 20), key='-PROGRESS-')],
