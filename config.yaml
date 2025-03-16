@@ -1,0 +1,17 @@
+# LLM API Configuration
+llm:
+  provider: "deepseek-chat"  # 支持的LLM提供商
+  api_key: ""        # API密钥将由用户在界面中输入
+
+# File Processing
+input:
+  allowed_formats:    # 支持的文件格式
+    - .xlsx
+    - .doc
+    - .docx
+    - .txt
+
+# Output Configuration
+output:
+  directory: "output"  # 输出目录
+  excel_filename: "art_list.xlsx"  # 默认Excel文件名

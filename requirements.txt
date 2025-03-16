@@ -1,0 +1,4 @@
+#PySimpleGUI --trusted-host pysimplegui.net --trusted-host pypi.org --trusted-host files.pythonhosted.org
+FreeSimpleGUI
+pyyaml
+pyinstaller
