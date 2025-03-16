@@ -62,7 +62,7 @@ MIT License
 
 ## 作者
 
-Chopin
+IcyIceX
 
 ## 版本历史
 
